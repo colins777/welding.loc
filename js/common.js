@@ -1,5 +1,5 @@
 $(function() {
 
-	console.log('234');
+	new WOW().init();
 
 });

@@ -25,6 +25,24 @@ body
 		&:required:valid
 			border-color: green
 
+section
+	padding: 50px
+
+.h2
+	font-size: 30px
+	font-family: $menu-font
+	position: relative
+	padding-left: 10px
+	margin-bottom: 0
+	&:before
+		position: absolute
+		content: ''
+		width: 4px
+		height: 100%
+		background-color: $accent
+		margin-left: -10px
+
+
 .img-responsive
 	display: block
 	max-width: 100%
@@ -37,6 +55,7 @@ body
 	width: 100%
 	margin: 0 auto
 	padding: 0 80px
+	//position: relative
 
 .text-center
 	text-align: center
@@ -46,5 +65,115 @@ b, strong
 
 h1
 	font-family: 'RobotoRegular', sans-serif
+
+.header
+	height: 100vh
+	background-repeat: no-repeat
+	background-size: cover
+	position: relative
+	&-wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.logo
+			img
+				max-height: 60px
+				width: auto
+	&-menu
+		padding: 30px 0
+		&__list
+			display: flex
+			align-items: center
+			justify-content: space-between
+			list-style-type: none
+			margin-bottom: 0
+			& > *
+				&:not(:last-child)
+					margin-right: 20px
+		&__link
+			color: #fff
+			font-size: 20px
+			text-transform: uppercase
+			font-family: $menu-font
+			transition: all .3s ease
+			&:hover
+				text-decoration: none
+				color: $accent
+	&-contacts
+		&__phone
+			display: flex
+			align-items: center
+			font-size: 30px
+			line-height: 30px
+			color: #fff
+			transition: all .3s ease
+			font-family: $menu-font
+			img
+				width: 30px
+				height: 30px
+				margin-right: 10px
+			&:hover
+				text-decoration: none
+				color: $accent
+	&-descr
+		&__text
+			display: flex
+			flex-direction: column
+			align-items: center
+			color: #fff
+			background-color: rgba(235,155,30,0.7959558823529411)
+			padding: 20px
+			max-width: 800px
+			width: 100%
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			h1
+				font-family: $menu-font
+				text-transform: uppercase
+				font-size: 70px
+			h2
+				font-size: 20px
+				text-transform: uppercase
+
+.about
+	&-wrap
+		margin-top: 30px
+
+.advantages
+	&-s
+		background-color: #f2f2f2
+	&-items
+		margin-top: 60px
+		display: flex
+		justify-content: space-between
+	&-item
+		width: 24%
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		img
+			width: 80px
+			height: auto
+		&__title
+			margin-top: 30px
+			position: relative
+			font-size: 20px
+			font-family: $menu-font
+			display: block
+			margin-bottom: 50px
+			&:after
+				content: ''
+				position: absolute
+				top: 50px
+				left: 0
+				width: 50%
+				height: 4px
+				background-color: $accent
+		&__text
+			color: #565656
+
+
 
 @import "media" // Always at the end
